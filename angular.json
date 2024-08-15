@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-dhis2-boilerplate": {
+    "facility-search": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ng-dhis2-boilerplate",
+            "outputPath": "dist/facility-search",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["src/polyfills.ts"],
@@ -55,11 +55,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ng-dhis2-boilerplate:build:production"
+              "buildTarget": "facility-search:build:production"
             },
             "development": {
               "proxyConfig": "proxy-config.json",
-              "buildTarget": "ng-dhis2-boilerplate:build:development"
+              "buildTarget": "facility-search:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -67,7 +67,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ng-dhis2-boilerplate:build"
+            "buildTarget": "facility-search:build"
           }
         },
         "test": {

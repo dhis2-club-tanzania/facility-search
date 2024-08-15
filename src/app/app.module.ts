@@ -11,6 +11,7 @@ import {
   ButtonModule,
   OrganisationUnitSelectorModule,
   PeriodSelectorModule,
+  ReactWrapperModule,
 } from '@iapps/ng-dhis2-ui';
 
 @NgModule({
@@ -23,13 +24,14 @@ import {
     }),
 
     NgxDhis2HttpClientModule.forRoot({
-      namespace: 'ng-dhis2-boilerplate',
+      namespace: 'facility-search',
       version: 1,
       models: [],
     }),
     ButtonModule,
     OrganisationUnitSelectorModule,
     PeriodSelectorModule,
+    ReactWrapperModule,
   ],
   declarations: [AppComponent, AppWrapperComponent],
   bootstrap: [AppWrapperComponent],
