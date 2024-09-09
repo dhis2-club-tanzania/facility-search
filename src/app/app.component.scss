@@ -1,42 +1,153 @@
-.app-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // height: calc(100vh - 80px);
-}
+/*Container*/
 
-.app-content {
-  text-align: center;
-}
-
-.component-block {
-  margin-top: 48px;
-  text-align: left;
-  padding-bottom: 80px;
-  display: flex;
-  gap: 48px;
-}
-
-.component-item {
-  border: solid 1px rgba(0, 0, 0, 0.2);
-  padding: 8px;
-}
-
-::ng-deep .search-container {
+::ng-deep .app-container {
   padding: 30px 50px;
 }
 
-::ng-deep .table-button-container {
+/*FacilityOutput Table*/
+::ng-deep .facility-output-container {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: end;
 }
 
-::ng-deep .searchBtn {
+/*Update HMIS*/
+::ng-deep .updateBtn {
   margin-bottom: 20px;
 }
-::ng-deep .updateBtn {
+
+/*The whole search section except title*/
+::ng-deep .search-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/*The back and update buttons container*/
+::ng-deep .button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/*Notification container*/
+::ng-deep .notification-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*The Search button and the link*/
+::ng-deep .btn-link-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70vw;
   margin-top: 20px;
-  margin-bottom: 20px;
+}
+
+/*The link*/
+::ng-deep .btn-link-container a {
+  margin-top: 20px;
+  text-decoration: none;
+  color: rgb(34, 109, 179);
+}
+
+/*The date fields container*/
+::ng-deep .date-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/*The date fields*/
+::ng-deep .start-date,
+::ng-deep .end-date {
+  width: 600px;
+}
+
+/*Link container of "search by code"*/
+::ng-deep .code-link {
+  margin-top: 20px;
+}
+
+/*Link of "search by code"*/
+::ng-deep .code-link a {
+  text-decoration: none;
+  color: rgb(34, 109, 179);
+}
+
+/*The table of all facilities*/
+::ng-deep .facility-list {
+  margin-top: 30px;
+}
+
+/*The table row of each facility*/
+::ng-deep .row {
+  cursor: pointer;
+}
+
+/*The pagination container*/
+::ng-deep .pagination {
+  width: 100%;
+  margin-top: 30px;
+  padding: 0px;
+}
+
+::ng-deep .circle-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+@media (max-width: 768px) {
+  ::ng-deep .app-container {
+    padding: 20px;
+  }
+
+  ::ng-deep .search-block {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 650px) {
+  ::ng-deep .start-date,
+  ::ng-deep .end-date {
+    width: 90%;
+  }
+}
+
+@media (max-width: 425px) {
+  ::ng-deep .search-title {
+    font-size: 1.1em;
+  }
+
+  ::ng-deep .btn-link-container {
+    width: 80vw;
+  }
+
+  ::ng-deep .btn-link-container a {
+    font-size: 15px;
+  }
+
+  ::ng-deep .pagination {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  ::ng-deep .btn-link-container a {
+    font-size: 13px;
+  }
 }
